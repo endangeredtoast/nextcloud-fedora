@@ -51,6 +51,16 @@ opcache.save_comments=1
 opcache.revalidate_freq=1
 ```
 
+### Tune PHP-FPM
+Change the following lines in '/etc/php-fpm.d/www.conf'
+```
+pm = dynamic
+pm.max_children = 120
+pm.start_servers = 12
+pm.min_spare_servers = 6
+pm.max_spare_servers = 18
+```
+
 
 ### Activate Redis and Memory Cache
 Edit the '/config/config.php' file in your nextcloud directory.
