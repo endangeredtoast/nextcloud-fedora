@@ -45,3 +45,8 @@ Make sure the following lines are present.
 'opcache.enable=1'
 'opcache.memory_consumption=1024'
 'opcache.interned_strings_buffer=512'
+
+
+
+### Activate Redis and Memory Cache
+
