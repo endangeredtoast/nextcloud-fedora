@@ -1,5 +1,4 @@
 # Install Nextcloud with Nginx and PHP-FPM on Fedora
-You'll need to set up a Fedora Server instance first. This is beyond the scope of this article.
 
 ## Prepare your virtual machine
 Follow the guide here to prepare your Fedora Server VM for Nginx hosting.
