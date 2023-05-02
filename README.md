@@ -29,9 +29,9 @@ sudo ./install-nextcloud.sh
 
 ## Tuning
 ### Install OPCache
-Install OPCache with Pecl.
+Install OPCache with dnf
 ```
-sudo pecl install opcache
+sudo dnf install php-opcache
 ```
 Enable OPCache in php.ini
 ```
