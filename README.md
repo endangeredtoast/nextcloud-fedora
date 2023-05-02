@@ -44,8 +44,11 @@ sudo nano /etc/php.d/10-opcache.ini
 Make sure the following lines are present.
 ```
 opcache.enable=1
+opcache.interned_strings_buffer=16
+opcache.max_accelerated_files=10000
 opcache.memory_consumption=1024
-opcache.interned_strings_buffer=512
+opcache.save_comments=1
+opcache.revalidate_freq=1
 ```
 
 
