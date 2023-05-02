@@ -69,7 +69,7 @@ sudo nano /config/config.php
 ```
 Add the following lines:
 ```
-  'default_phone_region' +> 'CA',
+  'default_phone_region' => 'CA',
   'memcache.local' => '\OC\Memcache\APCu',
   'memcache.distributed' => '\OC\Memcache\Redis',
   'filelocking.enabled' => true,
