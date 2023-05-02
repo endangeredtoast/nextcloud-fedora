@@ -56,6 +56,7 @@ sudo nano /config/config.php
 ```
 Add the following lines:
 ```
+  'default_phone_region' +> 'CA',
   'memcache.local' => '\OC\Memcache\APCu',
   'memcache.distributed' => '\OC\Memcache\Redis',
   'filelocking.enabled' => true,
@@ -66,3 +67,17 @@ Add the following lines:
        'timeout' => 0.0,
       ),
 ```
+
+
+### Enable System Variables
+Enable the following lines in the '/etc/php-fpm.d/www.conf' file (remove the semicolon at the front)
+```
+env[HOSTNAME] = $HOSTNAME
+env[PATH] = /usr/local/bin:/usr/bin:/bin
+env[TMP] = /tmp
+env[TMPDIR] = /tmp
+env[TEMP] = /tmp
+```
+
+
+
