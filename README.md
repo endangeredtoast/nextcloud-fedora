@@ -42,11 +42,27 @@ Use CTRL+W to search for opcache. Remove the semicolon before 'see /etc/php.d/10
 sudo nano /etc/php.d/10-opcache.ini
 ```
 Make sure the following lines are present.
-'opcache.enable=1'
-'opcache.memory_consumption=1024'
-'opcache.interned_strings_buffer=512'
-
+```
+opcache.enable=1
+opcache.memory_consumption=1024
+opcache.interned_strings_buffer=512
+```
 
 
 ### Activate Redis and Memory Cache
-
+Edit the '/config/config.php' file in your nextcloud directory.
+```
+sudo nano /config/config.php
+```
+Add the following lines:
+```
+  'memcache.local' => '\OC\Memcache\APCu',
+  'memcache.distributed' => '\OC\Memcache\Redis',
+  'filelocking.enabled' => true,
+  'memcache.locking' => '\OC\Memcache\Redis',
+  'redis' => array(
+       'host' => 'localhost',
+       'port' => 6379,
+       'timeout' => 0.0,
+      ),
+```
